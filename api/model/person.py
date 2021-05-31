@@ -1,4 +1,4 @@
-from sample_api.database import db
+from api.database import db
 
 
 class Person(db.Model):
