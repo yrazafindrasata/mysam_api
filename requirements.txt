@@ -1,0 +1,6 @@
+flask
+flask-cors
+flask-replicated
+flask-sqlalchemy
+gunicorn
+
