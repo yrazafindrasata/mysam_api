@@ -52,11 +52,11 @@ def end_trip():
         total_coast = 1.40 * trip_object.distance
 
         current_client = Client.query.get(current_trip.id_client)
-        new_balance_client = client_current.balance - total_coast
+        new_balance_client = current_client.balance - total_coast
         current_client.update({"balance": new_balance_client})
 
         current_driver = Driver.query.get(current_trip.id_driver)
-        new_balance_driver = driver_current.balance + total_coast * 85/100
+        new_balance_driver = current_driver.balance + total_coast * 85/100
         current_driver.update({"balance": new_balance_driver})
 
         db.session.commit()
